@@ -18,6 +18,7 @@
     --form-font-size: 0.5rem;
     --main-font: Manrope;
     --form-font: Ubuntu;
+    background-color: #282a36;
 
 }
 
@@ -50,7 +51,7 @@ html,body{
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.773)),
     url(https://images.unsplash.com/photo-1481018085669-2bc6e4f00eed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
     background-repeat: no-repeat ;
-    background-size: 250%;
+    background-size: 500%;
     background-position-x: -400px;
     justify-content: left;    
 }
@@ -65,10 +66,10 @@ html,body{
 
 .logo{
     position: relative;
-    top: 5vh;
-    left: 12vw;
-    width: 15vw;
-    height: 400px;
+    top: 8vh;
+    left: 10vw;
+    width: 20vw;
+    height: 10vh;
    
 }
 
@@ -225,7 +226,6 @@ transform: scale(95%);
 box-shadow:none;
 color:var(--form-label-color);
 
-
 }
 
 .account-login{
@@ -248,10 +248,21 @@ text-emphasis-style: none;
 
 }
 
-*:invalid{
+input:required:valid{
+    box-shadow:0px 19px 0px -11px rgba(93, 215, 27, 0.588);
+
+}
+
+input:required:invalid{
+    box-shadow:0px 19px 0px -11px rgba(215, 27, 42, 0.588);
+}
+
+
+input:focus:invalid{
+    background-color: var(--main-background-color);
     border-style: line;
     border:2px;
     border-color: var(--error-color);
-
-
+    color: var(--error-color);
+    box-shadow:0px 19px 0px -11px rgba(215, 27, 42, 0.588);
 }
