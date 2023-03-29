@@ -2,7 +2,8 @@
 ### A Sign-Up form landing page for mock practice.
 
 <br>
-Created for [The Odin Project](https://www.theodinproject.com/lessons/foundations-calculator) .
+
+Created for [The Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form) .
 
 ---
 <h3> Technologies used: </h3>
