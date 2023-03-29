@@ -8,6 +8,7 @@
 
 :root{
     --main-background-color: #282a36;
+    --logo-background-color: #282a36d6;
     --foreground-color:#44475a;
     --main-text-color: #ff79c6;
     --form-label-color:#bd93f9;
@@ -37,25 +38,51 @@ html,body{
 }
 
 
+
 .main{
     display:flex;
     flex-direction: row;
 }
 
 .image-bg{
-    display:flex;
-    flex-flow: column;
     width: 40vw;
-    height:100vh;
+    height: 100vh;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.773)),
     url(https://images.unsplash.com/photo-1481018085669-2bc6e4f00eed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
     background-repeat: no-repeat ;
-    background-size: 400%;
+    background-size: 250%;
     background-position-x: -400px;
     justify-content: left;    
 }
 
+.logo-bg{
+    width: 40vw;
+    height: 40vh;
+    background-color: var(--logo-background-color);
+    position: absolute;
+    top: 20vh;
+}
 
+.logo{
+    position: relative;
+    top: 5vh;
+    left: 12vw;
+    width: 15vw;
+    height: 400px;
+   
+}
+
+.credits{
+    width: 40vw;
+    height: 10vh;
+    position: absolute;
+    bottom: 2vh;
+    left: 2vh;
+    font-size: 0.6rem;
+    font-family: var(--main-font);
+    color: var(--form-label-color);
+
+}
 
 
 
@@ -170,11 +197,6 @@ label,input{
   }
 
 
-input:error{
-    background-color: #ff5555;
-    color:#282a36
-
-}
 
 .submit{
     display:flex;
@@ -227,6 +249,7 @@ text-emphasis-style: none;
 }
 
 *:invalid{
+    border-style: line;
     border:2px;
     border-color: var(--error-color);
 
