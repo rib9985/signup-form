@@ -1,13 +1,234 @@
-/* v for bg
-v for main font (text descriptions
-v for forms font
-v for let's do this
-v for button
-*/
+
+
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root{
+    --main-background-color: #282a36;
+    --foreground-color:#44475a;
+    --main-text-color: #ff79c6;
+    --form-label-color:#bd93f9;
+    --description-color:#50fa7b;
+    --error-color: #ff5555;
+    --main-font-size: 1.5rem;
+    --form-font-size: 0.5rem;
+    --main-font: Manrope;
+    --form-font: Ubuntu;
+
+}
+
+a{
+    color:inherit;
+}
 
 
+html,body{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    height: 0%;
+    
+}
+
+
+.main{
+    display:flex;
+    flex-direction: row;
+}
+
+.image-bg{
+    display:flex;
+    flex-flow: column;
+    width: 40vw;
+    height:100vh;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.773)),
+    url(https://images.unsplash.com/photo-1481018085669-2bc6e4f00eed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: no-repeat ;
+    background-size: 400%;
+    background-position-x: -400px;
+    justify-content: left;    
+}
+
+
+
+
+
+.bg-form-area{
+    height:100vh;
+    width: 65vw;
+    display:flex;
+    flex-flow: column;
+    background-color: var(--main-background-color);
+    justify-content: left;
+    margin: 0;
+    border: 0;
+    
+}
+
+.form-div{
+    background-color: var(--foreground-color);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 30vh;
+    margin: 0;
+    padding: 4rem;
+    padding-top: 1rem;
+    box-shadow: 0px 6px 15px -3px rgb(16, 16, 16);
+}
+
+
+
+.first-section,.second-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    gap: 4rem;
+    align-items: center;
+
+}
+
+.description{
+    font-size: 2rem;
+    font-family: var(--main-font);
+    color: var(--main-text-color);
+    padding: 5%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    color: var(--form-label-color);
+    font-family: var(--form-font);
+    font-weight: 700;
+    gap: 10px;
+}
+.form-div>h3{
+    font-size: 2.5rem; 
+    text-align: center;
+    color: var(--description-color);
+    font-family: var(--form-font);
+    font-style: italic;
+    text-transform: uppercase;
+    
+
+    
+}
+label,input{
+
+    text-align: left;
+    display:flex;
+    flex-direction:column;
+    justify-items: center;
+    font-size: 1rem;
+    
+  }
+
+
+
+  label{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+  }
+
+  input{
+    
+    background-color: var(--main-background-color);
+    height: 2.5rem;
+    color: var(--description-color);
+    width: 14rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-family: Ubuntu;
+    font-weight:400;
+    outline: 2px, var(--form-label-color);
+    
+  }
+
+  input:focus{
+    animation: ease-in-out, 1s;
+    background-color: var(--foreground-color);
+    border:var(--main-text-color);
+    border-style:solid;
+    color: var(--main-text-color);
+    box-shadow: 0px 19px 0px -11px rgba(199, 119, 199, 0.588);
+    
+    
+
+  }
+
+
+input:error{
+    background-color: #ff5555;
+    color:#282a36
+
+}
+
+.submit{
+    display:flex;
+    flex-direction: column;
+    padding:40px;
+    gap:10px;
+    align-items: center;
+}
+
+.create{
+    width: 200px;
+    height: 50px;
+    font-style: var(--main-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background-color: var(--foreground-color);
+    color: var(--description-color);
+    border-style: none;
+    box-shadow:0px 19px 0px -11px rgba(199, 119, 199, 0.588);
+}
+
+.create:active{
+animation: ease, 200ms;
+transform: scale(95%);
+box-shadow:none;
+color:var(--form-label-color);
+
+
+}
+
+.account-login{
+    display: flex;
+    flex: row;
+    align-items: center;
+    padding:10px;
+    gap: 20px;
+    font-family: var(--form-font);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color)
+
+}
+
+.login{
+border: none;
+text-decoration: none;
+text-emphasis-style: none;
+
+}
+
+*:invalid{
+    border:2px;
+    border-color: var(--error-color);
+
+
+}
